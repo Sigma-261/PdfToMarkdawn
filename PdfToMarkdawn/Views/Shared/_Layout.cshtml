@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Drag and drop PDF</title>
+
+    <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
+</head>
+<body>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <form id="form" method="post" enctype="multipart/form-data"
+          data-pasley-validate class="form-horizontal form-label-left">
+        <div class="form-group">
+            <label class="control-label col-md-2" for="first-name">
+                Upload PDF
+            </label>
+            <div class="col-md-6" id="dropzone">
+                <div action="/home/upload" class="dropzone" id="uploader">
+                    Drop PDF here or click
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
